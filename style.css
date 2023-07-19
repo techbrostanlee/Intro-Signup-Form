@@ -94,7 +94,7 @@ body{
     color: var(--DarkBlue);
     padding: 0 5px;
     pointer-events: none;
-    transition: .6s ;
+    transition: .3s ;
 
 }
 .field input{
@@ -109,7 +109,7 @@ body{
     border-radius: 5px;
 }
 .field input:focus~label,
-.field input:active~label{
+.field input:valid~label{
     top: 0;
     font-size: 12px;
     background: var(--white);
@@ -128,6 +128,7 @@ body{
     color: var(--white);
     text-transform: uppercase;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .cta__terms{

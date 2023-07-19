@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Into Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_container">
+        <div class="information">
+            <h2>Learn to code by watching others </h2>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+        </div>
+        <div class="field_container">
+            <div class="free_trial">
+                <p>Try it free 7 days <span> then $20/mo. thereafter</span> </p>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <input
+                    class="field_input"
+                    id="firstname"
+                    name="firstname"
+                    maxlength="50"
+                    autocomplete="off"
+                     type="text">
+                     <label class="field_label" for="firstname"> First Name</label>
+                     <span class="error-icon">
+                        <img src="./images/icon-error.svg" alt="" aria-hidden="true">
+                     </span>
+                     <p class="error-message" id="firstname-error"></p>
+                </div>
+
+                <div class="field">
+                    <input
+                    class="field_input"
+                    id="lastname"
+                    name="lastname"
+                    maxlength="50"
+                    autocomplete="off"
+                     type="text">
+                     <label class="field_label" for="lastname"> Last Name</label>
+                     <span class="error-icon">
+                        <img src="./images/icon-error.svg" alt="" aria-hidden="true">
+                     </span>
+                     <p class="error-message" id="lastname-error"></p>
+                </div>
+
+                <div class="field">
+                    <input
+                    class="field_input"
+                    id="email"
+                    name="email"
+                    maxlength="64"
+                    autocomplete="off"
+                     type="email">
+                     <label class="field_label" for="email"> Email</label>
+                     <span class="error-icon">
+                        <img src="./images/icon-error.svg" alt="" aria-hidden="true">
+                     </span>
+                     <p class="error-message" id="email-error"></p>
+                </div>
+
+                <div class="field">
+                    <input
+                    class="field_input"
+                    id="new-password"
+                    name="password"
+                    minlength="8"
+                    autocomplete="new-password"
+                     type="password">
+                     <label class="field_label" for="new-password"> Password</label>
+                     <span class="error-icon">
+                        <img src="./images/icon-error.svg" alt="" aria-hidden="true">
+                     </span>
+                     <p class="error-message" id="new-password-error"></p>
+                </div>
+
+                <button class="btn" type="submit">
+                    Claim your free trial 
+                </button>
+                <p class="cta__terms">
+                    By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

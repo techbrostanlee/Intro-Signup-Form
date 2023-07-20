@@ -8,11 +8,10 @@ const emailError = document.querySelector('#email-error');
 const passwordError = document.querySelector('#new-password-error');
 
 
-const btnSubmit = document.querySelector('.btn');
-
-btnSubmit.addEventListener('submit', (e)=>{
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+    // Add validation functions here
 });
 
 
@@ -46,7 +45,7 @@ const checkFirstName =()=>{
 
     }
     else if(!isBetween(firstname.length, min, max)){
-        firstNameError.innerText = 'Firstname must be between ${min} and ${max} characters.'
+        firstNameError.innerText = `Firstname must be between ${min} and ${max} characters.`;
         firstNameError.style.color ='red';
         firstName.style.border = '1.8px solid red'
     }
@@ -70,7 +69,7 @@ const checkLastName =()=>{
 
     }
     else if(!isBetween(lastname.length, min, max)){
-        lastNameError.innerText = 'Lastname must be between ${min} and ${max} characters.'
+        lastNameError.innerText = `Lastname must be between ${min} and ${max} characters.`;
         lastNameError.style.color ='red';
         lastName.style.border = '1.8px solid red'
     }
@@ -121,4 +120,7 @@ const checkPassword = () =>{
     }
 
     
+}
+if (checkFirstName() && checkLastName() && checkEmail() && checkPassword()) {
+    form.submit(); // Submit the form if all validations pass
 }
